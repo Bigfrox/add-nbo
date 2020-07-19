@@ -31,7 +31,7 @@ int main(int argc, char *argv[]) {
         printf("file open error.\n");
         return -1;
     }
-    fread(&buf, 1, 4, fd1);
+    fread(buf, 1, 4, fd1);
 
     
     fd2 = fopen(argv[2], "r");
@@ -39,7 +39,7 @@ int main(int argc, char *argv[]) {
         printf("file open error.\n");
         return -1;
     }
-    fread(&buf2, 1, 4, fd2);
+    fread(buf2, 1, 4, fd2);
 
 
     uint32_t* p = buf;
